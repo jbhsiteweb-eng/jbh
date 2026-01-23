@@ -11,12 +11,12 @@ function checkRateLimit(ip: string): boolean {
   const limit = rateLimitStore.get(ip);
 
   if (!limit || now > limit.resetTime) {
-    // Reset or create new limit (5 requests per 15 minutes)
+    // Reset or create new limit (50 requests per 15 minutes - increased for development)
     rateLimitStore.set(ip, { count: 1, resetTime: now + 15 * 60 * 1000 });
     return true;
   }
 
-  if (limit.count >= 5) {
+  if (limit.count >= 50) {
     return false; // Rate limit exceeded
   }
 
@@ -108,11 +108,17 @@ function detectSpam(message: string): boolean {
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
+  secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
+  tls: {
+    // Do not fail on invalid certs (for self-signed certificates)
+    rejectUnauthorized: false,
+  },
+  debug: true, // Enable debug output
+  logger: true, // Log to console
 });
 
 export async function POST(request: NextRequest) {
@@ -162,7 +168,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Email to business (Simple & Professional)
+    // Email to business (Simple & Professional - Plain)
     const mailOptions = {
       from: process.env.SMTP_FROM_EMAIL,
       to: process.env.SMTP_TO_EMAIL,
@@ -172,19 +178,15 @@ export async function POST(request: NextRequest) {
         <html>
         <head>
           <style>
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-            .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
-            .header { background: #667eea; color: white; padding: 30px; text-align: center; }
-            .header h1 { margin: 0; font-size: 22px; font-weight: 600; }
-            .content { padding: 40px 30px; }
-            .field { margin-bottom: 25px; }
-            .label { font-size: 12px; font-weight: 600; color: #667eea; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-            .value { color: #333; font-size: 15px; line-height: 1.5; }
-            .value a { color: #667eea; text-decoration: none; }
-            .message-box { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea; margin-top: 8px; white-space: pre-wrap; }
-            .divider { height: 1px; background: #e9ecef; margin: 25px 0; }
-            .footer { background: #f8f9fa; padding: 25px 30px; text-align: center; color: #6c757d; font-size: 13px; }
-            .info-box { background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 25px; font-size: 12px; color: #6c757d; }
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #000; margin: 0; padding: 20px; }
+            .container { max-width: 600px; margin: 0 auto; }
+            .header { border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px; }
+            .header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+            .field { margin-bottom: 15px; }
+            .label { font-weight: bold; margin-bottom: 5px; }
+            .value { margin-left: 10px; }
+            .message-box { border: 1px solid #000; padding: 15px; margin-top: 10px; white-space: pre-wrap; }
+            .footer { border-top: 1px solid #000; padding-top: 15px; margin-top: 30px; text-align: center; }
           </style>
         </head>
         <body>
@@ -194,37 +196,33 @@ export async function POST(request: NextRequest) {
             </div>
             <div class="content">
               <div class="field">
-                <div class="label">Nom Complet</div>
+                <div class="label">Nom Complet:</div>
                 <div class="value">${name}</div>
               </div>
               
               <div class="field">
-                <div class="label">Email</div>
-                <div class="value"><a href="mailto:${email}">${email}</a></div>
+                <div class="label">Email:</div>
+                <div class="value">${email}</div>
               </div>
               
               ${phone ? `
                 <div class="field">
-                  <div class="label">Téléphone</div>
-                  <div class="value"><a href="tel:${phone}">${phone}</a></div>
+                  <div class="label">Téléphone:</div>
+                  <div class="value">${phone}</div>
                 </div>
               ` : ''}
               
               ${service ? `
                 <div class="field">
-                  <div class="label">Service Demandé</div>
+                  <div class="label">Service Demandé:</div>
                   <div class="value">${service}</div>
                 </div>
               ` : ''}
               
-              <div class="divider"></div>
-              
               <div class="field">
-                <div class="label">Message</div>
+                <div class="label">Message:</div>
                 <div class="message-box">${message.replace(/\n/g, '<br>')}</div>
               </div>
-
-              
             </div>
             <div class="footer">
               <strong>JBH ENGINEERING</strong><br>
@@ -237,7 +235,7 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Auto-reply to user (Simple & Professional)
+    // Auto-reply to user (Simple & Professional - Plain)
     const autoReplyOptions = {
       from: process.env.SMTP_FROM_EMAIL,
       to: email,
@@ -247,19 +245,15 @@ export async function POST(request: NextRequest) {
         <html>
         <head>
           <style>
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-            .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
-            .header { background: #667eea; color: white; padding: 40px 30px; text-align: center; }
-            .header h1 { margin: 0; font-size: 24px; font-weight: 600; }
-            .content { padding: 40px 30px; }
-            .content p { margin: 0 0 20px 0; color: #333; }
-            .summary { background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 25px 0; border-left: 3px solid #667eea; }
-            .summary p { margin: 0 0 12px 0; }
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #000; margin: 0; padding: 20px; }
+            .container { max-width: 600px; margin: 0 auto; }
+            .header { border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px; }
+            .header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+            .content p { margin: 0 0 15px 0; }
+            .summary { border: 1px solid #000; padding: 15px; margin: 20px 0; }
+            .summary p { margin: 0 0 10px 0; }
             .summary p:last-child { margin: 0; }
-            .footer { background: #f8f9fa; padding: 30px; text-align: center; }
-            .footer p { margin: 0 0 15px 0; color: #6c757d; font-size: 14px; }
-            .contact-info { margin-top: 20px; }
-            .contact-info a { color: #667eea; text-decoration: none; font-weight: 500; }
+            .footer { border-top: 1px solid #000; padding-top: 15px; margin-top: 30px; text-align: center; }
           </style>
         </head>
         <body>
@@ -283,13 +277,11 @@ export async function POST(request: NextRequest) {
             <div class="footer">
               <p><strong>JBH ENGINEERING</strong><br>
               Bureau d'Études Techniques</p>
-              <div class="contact-info">
-                <p>
-                  <a href="tel:+212661858581">+212 661 85 85 81</a><br>
-                  <a href="mailto:Contact@jbh.ma">Contact@jbh.ma</a><br>
-                  <a href="https://jbh.ma">www.jbh.ma</a>
-                </p>
-              </div>
+              <p>
+                +212 661 85 85 81<br>
+                Contact@jbh.ma<br>
+                www.jbh.ma
+              </p>
             </div>
           </div>
         </body>
@@ -310,6 +302,14 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Error sending email:', error);
+    
+    // Log detailed error information
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
+    
     return NextResponse.json(
       { error: 'Erreur lors de l\'envoi du message. Veuillez réessayer.' },
       { status: 500 }
