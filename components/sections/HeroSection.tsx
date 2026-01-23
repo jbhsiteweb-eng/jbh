@@ -277,7 +277,7 @@ export function HeroSection() {
                                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
                                 </div>
-                                <span>Voir la Vidéo</span>
+                                {/* <span>Voir la Vidéo</span> */}
                             </button>
                         </div>
 
