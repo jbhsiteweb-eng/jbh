@@ -24,11 +24,11 @@ export default function PortfolioGallery() {
         return () => clearInterval(interval);
     }, [scrollingTexts.length]);
 
-    // Get one project per category
+    // Get one project per category (limited to 5 total)
     const getFilteredProjects = () => {
         if (activeFilter === 'Tous') {
-            // Show one project from each category (excluding "Tous")
-            const categoriesWithProjects = categories.filter(cat => cat !== 'Tous');
+            // Show one project from the first 5 categories (excluding "Tous")
+            const categoriesWithProjects = categories.filter(cat => cat !== 'Tous').slice(0, 5);
             return categoriesWithProjects.map(category => {
                 return projects.find(project => project.category === category);
             }).filter(Boolean) as typeof projects;
