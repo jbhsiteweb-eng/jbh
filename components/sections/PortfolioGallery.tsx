@@ -24,10 +24,22 @@ export default function PortfolioGallery() {
         return () => clearInterval(interval);
     }, [scrollingTexts.length]);
 
+    // Get one project per category
+    const getFilteredProjects = () => {
+        if (activeFilter === 'Tous') {
+            // Show one project from each category (excluding "Tous")
+            const categoriesWithProjects = categories.filter(cat => cat !== 'Tous');
+            return categoriesWithProjects.map(category => {
+                return projects.find(project => project.category === category);
+            }).filter(Boolean) as typeof projects;
+        } else {
+            // Show only the first project from the selected category
+            const firstProject = projects.find(project => project.category === activeFilter);
+            return firstProject ? [firstProject] : [];
+        }
+    };
 
-    const filteredProjects = activeFilter === 'Tous'
-        ? projects
-        : projects.filter(project => project.category === activeFilter);
+    const filteredProjects = getFilteredProjects();
 
     return (
         <section className="py-24 bg-background relative overflow-hidden">
@@ -72,7 +84,7 @@ export default function PortfolioGallery() {
                         className="text-muted-foreground text-lg md:text-xl font-light"
                     >
 
-                        Notre expertise pluridisciplinaire et notre approche sur mesure font de nous le partenaire idéal pour vos projets d'ingénierie les plus ambitieux.
+                        Notre expertise pluridisciplinaire et notre approche sur mesure font de nous le partenaire idéal pour vos projets dingénierie les plus ambitieux.
                     </motion.p>
                 </div>
 
