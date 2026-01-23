@@ -43,7 +43,7 @@ export const siteConfig = {
         email: "Contact@jbh.ma",
         emailLink: "mailto:Contact@jbh.ma",
         whatsapp: "212661858581", // Without + or spaces
-        whatsappMessage: "Bonjour ! Je suis intéressé par vos services d'architecture.",
+        whatsappMessage: "Bonjour ! Je suis intéressé par vos services.",
     },
 
     // Address
