@@ -28,7 +28,7 @@ export default function PortfolioGallery() {
     const getFilteredProjects = () => {
         if (activeFilter === 'Tous') {
             // Show one project from the first 5 categories (excluding "Tous")
-            const categoriesWithProjects = categories.filter(cat => cat !== 'Tous').slice(0, 5);
+            const categoriesWithProjects = categories.filter(cat => cat !== 'Tous').slice(0, 6);
             return categoriesWithProjects.map(category => {
                 return projects.find(project => project.category === category);
             }).filter(Boolean) as typeof projects;
