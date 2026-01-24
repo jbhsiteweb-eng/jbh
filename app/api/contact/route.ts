@@ -2,6 +2,17 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { headers } from 'next/headers';
 
+// Interface for contact form data
+interface ContactFormData {
+  name?: string;
+  email?: string;
+  phone?: string;
+  service?: string;
+  message?: string;
+  website?: string;
+  timestamp?: string;
+}
+
 // Rate limiting store (in production, use Redis or a database)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
 
@@ -25,7 +36,7 @@ function checkRateLimit(ip: string): boolean {
 }
 
 // Security: Input validation and sanitization
-function validateAndSanitize(data: any) {
+function validateAndSanitize(data: ContactFormData) {
   const errors: string[] = [];
 
   // Name validation
@@ -79,11 +90,11 @@ function validateAndSanitize(data: any) {
     isValid: errors.length === 0,
     errors,
     sanitized: {
-      name: data.name?.trim().substring(0, 100),
-      email: data.email?.trim().toLowerCase().substring(0, 255),
-      phone: data.phone?.trim().substring(0, 20),
-      service: data.service?.trim().substring(0, 100),
-      message: data.message?.trim().substring(0, 5000),
+      name: data.name?.trim().substring(0, 100) || '',
+      email: data.email?.trim().toLowerCase().substring(0, 255) || '',
+      phone: data.phone?.trim().substring(0, 20) || '',
+      service: data.service?.trim().substring(0, 100) || '',
+      message: data.message?.trim().substring(0, 5000) || '',
     }
   };
 }

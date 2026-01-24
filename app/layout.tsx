@@ -5,14 +5,15 @@ import { Header2 } from "@/components/layout/Header2";
 import { Footer2 } from "@/components/layout/Footer2";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { StructuredData } from "@/components/seo/StructuredData";
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  adjustFontFallback: true,
 });
 
 const dmSans = DM_Sans({
@@ -20,6 +21,9 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
