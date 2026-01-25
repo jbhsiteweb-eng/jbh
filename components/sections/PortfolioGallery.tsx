@@ -24,18 +24,19 @@ export default function PortfolioGallery() {
         return () => clearInterval(interval);
     }, [scrollingTexts.length]);
 
-    // Get one project per category (limited to 5 total)
+    // Get filtered projects based on category
     const getFilteredProjects = () => {
         if (activeFilter === 'Tous') {
-            // Show one project from the first 5 categories (excluding "Tous")
+            // Show one project from each of the first 6 categories (excluding "Tous")
             const categoriesWithProjects = categories.filter(cat => cat !== 'Tous').slice(0, 6);
             return categoriesWithProjects.map(category => {
                 return projects.find(project => project.category === category);
             }).filter(Boolean) as typeof projects;
         } else {
-            // Show only the first project from the selected category
-            const firstProject = projects.find(project => project.category === activeFilter);
-            return firstProject ? [firstProject] : [];
+            // Show 6 projects from the selected category
+            return projects
+                .filter(project => project.category === activeFilter)
+                .slice(0, 6);
         }
     };
 
