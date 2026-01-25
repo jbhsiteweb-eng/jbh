@@ -9,53 +9,43 @@ export function LogoSection() {
         {
             src: "/images/logos/alomrane.jpeg",
             title: "Al Omrane",
-            alt: "Al Omrane",
         },
         {
             src: "/images/logos/atlas.jpeg",
             title: "Atlas",
-            alt: "Atlas",
         },
         {
             src: "/images/logos/danialand.jpeg",
             title: "Agadir Land",
-            alt: "Danialand",
         },
         {
             src: "/images/logos/doha.jpeg",
             title: "Doha",
-            alt: "Doha",
         },
         {
             src: "/images/logos/ibnozohr.jpeg",
             title: "Ibn Zohr",
-            alt: "Ibn Zohr",
         },
         
         {
             src: "/images/logos/mobina.jpeg",
             title: "Mobina",
-            alt: "Mobina",
         },
         {
             src: "/images/logos/ofppt.jpeg",
             title: "OFPT",
-            alt: "OFPT",
         },
         {
             src: "/images/logos/police.jpeg",
-            title: "Police",
-            alt: "Police",
+            title: "D-G-A-P-R",
         },
         {
             src: "/images/logos/ramsa.jpeg",
             title: "RAMSA",
-            alt: "RAMSA",
         },
         {
             src: "/images/logos/souscamp.jpeg",
             title: "Sous Camp",
-            alt: "Sous Camp",
         },
     ];
 
@@ -91,6 +81,7 @@ export function LogoSection() {
                                     alt={logo.title}
                                     fill
                                     className="object-contain"
+                                    
                                 />
                             </div>
                             <span className="text-xs font-bold text-foreground/80 tracking-wider">
