@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Calendar, Clock, User, Share2, Facebook, Twitter, Linkedin, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import siteConfig from "@/config/site";
 
 // Blog posts data - In production, this would come from a CMS or database
 const blogPosts = [
@@ -31,9 +32,9 @@ const blogPosts = [
             <p>L'avenir de l'architecture urbaine réside dans le design régénératif — des bâtiments qui ne se contentent pas de minimiser les dommages mais contribuent activement à la restauration de l'environnement. Des façades séquestrant le carbone aux bâtiments produisant plus d'énergie qu'ils n'en consomment, la prochaine génération d'architecture urbaine promet de transformer notre relation avec l'environnement bâti.</p>
         `,
         category: "Durabilité",
-        author: "James Harrison",
-        authorRole: "Fondateur & PDG",
-        authorImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "8 Janvier 2024",
         readTime: "8 min de lecture",
         image: "https://images.unsplash.com/photo-1518005068251-37900150dfca?q=80&w=1600&auto=format&fit=crop",
@@ -63,9 +64,9 @@ const blogPosts = [
             <p>L'ajout de petites quantités de graphène au béton peut doubler sa résistance tout en réduisant la teneur en ciment de 50%. Cette avancée pourrait réduire considérablement l'empreinte carbone de l'industrie de la construction, la production de ciment représentant environ 8% des émissions mondiales de CO2.</p>
         `,
         category: "Construction",
-        author: "Michael Chen",
-        authorRole: "Ingénieur Structure",
-        authorImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "5 Janvier 2024",
         readTime: "6 min de lecture",
         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop",
@@ -121,9 +122,9 @@ const blogPosts = [
             <p>Les bâtiments intelligents génèrent de vastes quantités de données, soulevant d'importantes questions sur la confidentialité et la sécurité. Une mise en œuvre responsable nécessite une réflexion approfondie sur les données collectées, leur utilisation et qui y a accès. Les bâtiments intelligents les plus réussis équilibrent fonctionnalité et transparence.</p>
         `,
         category: "Technologie",
-        author: "Sarah Mitchell",
-        authorRole: "Architecte Principal",
-        authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "28 Décembre 2023",
         readTime: "7 min de lecture",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop",
@@ -150,9 +151,9 @@ const blogPosts = [
             <p>Un design biophilique réussi nécessite une intégration réfléchie dès les premières étapes de la conception. Il ne s'agit pas simplement d'ajouter des plantes à un bâtiment conventionnel — c'est repenser fondamentalement comment les bâtiments connectent les occupants aux modèles et processus naturels.</p>
         `,
         category: "Architecture",
-        author: "James Harrison",
-        authorRole: "Fondateur & PDG",
-        authorImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "22 Décembre 2023",
         readTime: "6 min de lecture",
         image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
@@ -179,9 +180,9 @@ const blogPosts = [
             <p>La construction modulaire moderne offre une flexibilité de conception remarquable. L'ingénierie avancée permet aux modules de couvrir de plus grandes distances et de s'empiler plus haut. Les architectes explorent de plus en plus les méthodes modulaires pour des conceptions distinctives qui défient les idées préconçues sur les bâtiments préfabriqués.</p>
         `,
         category: "Construction",
-        author: "Michael Chen",
-        authorRole: "Ingénieur Structure",
-        authorImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "18 Décembre 2023",
         readTime: "5 min de lecture",
         image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop",
@@ -208,9 +209,9 @@ const blogPosts = [
             <p>Les neutres offrent flexibilité et sophistication. Bien que souvent considérées comme sûres, les palettes neutres nécessitent une attention particulière aux sous-tons et aux textures pour éviter que les espaces ne paraissent plats. La clé est de comprendre que les neutres portent des informations de couleur subtiles qui affectent la perception spatiale.</p>
         `,
         category: "Design d'Intérieur",
-        author: "Emily Rodriguez",
-        authorRole: "Designer d'Intérieur",
-        authorImage: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "15 Décembre 2023",
         readTime: "4 min de lecture",
         image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1600&auto=format&fit=crop",
@@ -237,9 +238,9 @@ const blogPosts = [
             <p>Une conception zéro émission véritablement durable doit également aborder le carbone intrinsèque — les émissions associées à la production de matériaux et à la construction. Les projets phares calculent désormais le carbone sur toute la durée de vie, sélectionnant des matériaux à faible teneur en carbone et concevant pour la longévité et l'adaptabilité.</p>
         `,
         category: "Durabilité",
-        author: "Sarah Mitchell",
-        authorRole: "Architecte Principal",
-        authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+        author: siteConfig.team[0].name,
+        authorRole: siteConfig.team[0].role,
+        authorImage: siteConfig.team[0].image,
         date: "10 Décembre 2023",
         readTime: "9 min de lecture",
         image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
@@ -427,7 +428,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         <aside className="lg:col-span-4 space-y-8">
                             {/* Author Card */}
                             <div className="bg-white dark:bg-white/5 p-8 rounded-3xl border border-neutral-100 dark:border-white/10">
-                                <h3 className="text-lg font-bold text-foreground mb-6">À propos de l'auteur</h3>
+                                <h3 className="text-lg font-bold text-foreground mb-6">À propos de l&apos;auteur</h3>
                                 <div className="flex items-center gap-4 mb-4">
                                     <Image
                                         src={post.authorImage}
@@ -442,8 +443,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                     </div>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
-                                    Expert en conception architecturale et pratiques de construction durable avec plus de 15 ans d'expérience dans l'industrie.
+                                    {siteConfig.team[0].description}
                                 </p>
+                               
                             </div>
 
                             {/* Related Posts */}
