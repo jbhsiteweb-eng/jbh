@@ -74,9 +74,6 @@ async function optimizeImage(inputPath) {
     const originalSize = getFileSizeKB(inputPath);
     stats.originalSize += parseFloat(originalSize);
 
-    console.log(`\n📸 Processing: ${path.relative(INPUT_DIR, inputPath)}`);
-    console.log(`   Original size: ${originalSize} KB`);
-
     // Convert to WebP
     await sharp(inputPath)
       .webp({ quality: WEBP_QUALITY })
@@ -85,7 +82,6 @@ async function optimizeImage(inputPath) {
     const webpSize = getFileSizeKB(webpPath);
     stats.optimizedSize += parseFloat(webpSize);
     
-    console.log(`   ✅ WebP created: ${webpSize} KB (${((1 - webpSize/originalSize) * 100).toFixed(1)}% smaller)`);
 
     // Also create optimized original format as fallback
     if (ext === '.jpg' || ext === '.jpeg') {
@@ -95,7 +91,6 @@ async function optimizeImage(inputPath) {
       
       // Replace original
       fs.renameSync(optimizedPath + '.tmp', optimizedPath);
-      console.log(`   ✅ Optimized JPEG created`);
     } else if (ext === '.png') {
       await sharp(inputPath)
         .png({ quality: PNG_QUALITY, compressionLevel: 9 })
@@ -103,7 +98,6 @@ async function optimizeImage(inputPath) {
       
       // Replace original
       fs.renameSync(optimizedPath + '.tmp', optimizedPath);
-      console.log(`   ✅ Optimized PNG created`);
     }
 
     stats.processed++;
@@ -117,50 +111,22 @@ async function optimizeImage(inputPath) {
  * Main function
  */
 async function main() {
-  console.log('🖼️  JBH Image Optimization Tool\n');
-  console.log('📁 Scanning for images...\n');
-
-  // Check if sharp is installed
   try {
     await import('sharp');
   } catch {
-    console.error('❌ Sharp is not installed!');
-    console.log('\n📦 Please install it first:');
-    console.log('   npm install sharp\n');
     process.exit(1);
   }
 
-  // Get all images
   const images = getImageFiles(INPUT_DIR);
   
   if (images.length === 0) {
-    console.log('⚠️  No images found in', INPUT_DIR);
     return;
   }
 
-  console.log(`Found ${images.length} images to optimize\n`);
-  console.log('=' .repeat(60));
-
-  // Process all images
   for (const imagePath of images) {
     await optimizeImage(imagePath);
   }
-
-  // Print summary
-  console.log('\n' + '='.repeat(60));
-  console.log('\n📊 Optimization Summary:\n');
-  console.log(`   Images processed: ${stats.processed}`);
-  console.log(`   Errors: ${stats.errors}`);
-  console.log(`   Original total size: ${stats.originalSize.toFixed(2)} KB (${(stats.originalSize/1024).toFixed(2)} MB)`);
-  console.log(`   Optimized total size: ${stats.optimizedSize.toFixed(2)} KB (${(stats.optimizedSize/1024).toFixed(2)} MB)`);
-  console.log(`   Total savings: ${(stats.originalSize - stats.optimizedSize).toFixed(2)} KB (${((1 - stats.optimizedSize/stats.originalSize) * 100).toFixed(1)}%)`);
-  
-  console.log('\n✅ Optimization complete!\n');
-  console.log('💡 Next steps:');
-  console.log('   1. Review the WebP images');
-  console.log('   2. Update your components to use .webp extensions');
-  console.log('   3. Test the website');
-  console.log('   4. Deploy to production\n');
+    
 }
 
 // Run the script

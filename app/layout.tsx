@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     apple: "/images/logo/single-logo.png",
   },
   manifest: "/manifest.json",
-  category: "architecture"
+  category: "Engineering"
 };
 
 export const viewport: Viewport = {
