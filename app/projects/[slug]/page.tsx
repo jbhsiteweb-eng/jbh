@@ -22,7 +22,7 @@ export default function ProjectDetailPage() {
             <main className="min-h-screen bg-background flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-heading font-bold text-foreground mb-4">Projet Non Trouvé</h1>
-                    <p className="text-muted-foreground mb-8">Le projet que vous recherchez n'existe pas.</p>
+                    <p className="text-muted-foreground mb-8">Le projet que vous recherchez n&apos;existe pas.</p>
                     <Button asChild className="rounded-full">
                         <Link href="/projects">Retour aux Projets</Link>
                     </Button>
@@ -93,7 +93,7 @@ export default function ProjectDetailPage() {
             {/* Project Details */}
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" alt="" fill aria-hidden="true" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -214,7 +214,7 @@ export default function ProjectDetailPage() {
                                 className="bg-secondary p-8 rounded-3xl relative overflow-hidden"
                             >
                                 <div className="absolute inset-0 opacity-10">
-                                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover invert" />
+                                    <Image src="/bg/bg.jpeg" fill alt="" aria-hidden="true" className="w-full h-full object-cover invert" />
                                 </div>
                                 <div className="relative z-10">
                                     <h3 className="text-xl font-bold text-white mb-6">Caractéristiques Clés</h3>

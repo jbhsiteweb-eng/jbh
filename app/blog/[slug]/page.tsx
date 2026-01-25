@@ -375,7 +375,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* Article Content */}
             <section className="py-16 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" alt="" fill aria-hidden="true" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -480,7 +480,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             {/* CTA */}
                             <div className="bg-secondary p-8 rounded-3xl relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-10">
-                                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover invert" />
+                                    <Image src="/bg/bg.jpeg" alt="" fill aria-hidden="true" className="w-full h-full object-cover invert" />
                                 </div>
                                 <div className="relative z-10">
                                     <h3 className="text-xl font-bold text-white mb-4">

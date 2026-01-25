@@ -37,9 +37,10 @@ export default function ProjectsPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -72,7 +73,7 @@ export default function ProjectsPage() {
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
                             Explorez notre portefeuille diversifié de projets
-                            qui mettent en valeur notre engagement envers l'excellence technique.
+                            qui mettent en valeur notre engagement envers l&apos;excellence technique.
                         </p>
                     </motion.div>
                 </div>
@@ -212,9 +213,10 @@ export default function ProjectsPage() {
             <section className="py-20 bg-secondary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -248,7 +250,7 @@ export default function ProjectsPage() {
             {/* CTA Section */}
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" alt="" fill aria-hidden="true" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">

@@ -69,9 +69,10 @@ export default function AboutPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -94,7 +95,7 @@ export default function AboutPage() {
                         </div>
 
                         <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
-                            Bureau d'Études Techniques
+                            Bureau d&apos;Études Techniques
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
                             Expertise en Génie Civil <br />
@@ -104,7 +105,7 @@ export default function AboutPage() {
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
                             JBH Engineering intervient dans le génie civil et les lots techniques comme
-                            un BET performant dans le métier du bâtiment tous corps d'état.
+                            un BET performant dans le métier du bâtiment tous corps d&apos;état.
                         </p>
                     </motion.div>
                 </div>
@@ -137,7 +138,8 @@ export default function AboutPage() {
             <section className="py-24 relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" fill alt="" aria-hidden="true" className="w-full h-full object-cover" />
+
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -170,7 +172,7 @@ export default function AboutPage() {
                             >
                                 <Quote className="w-10 h-10 text-white/30 mb-4" />
                                 <p className="text-white font-medium italic mb-4">
-                                    "L'ingénierie est le jeu des méthodes et des techniques structurées pour résoudre des problèmes complexes, concevoir des solutions efficaces et optimisées."
+                                    L&apos;ingénierie est le jeu des méthodes et des techniques structurées pour résoudre des problèmes complexes, concevoir des solutions efficaces et optimisées.
                                 </p>
                                 <p className="text-white/60 text-sm">— Le Corbusier</p>
                             </motion.div>
@@ -193,13 +195,13 @@ export default function AboutPage() {
                                 </span>
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                                JBH Engineering est un bureau d'études techniques spécialisé dans le génie civil et les lots
-                                techniques. Notre mission : fournir des études d'exécution de structure optimisées et sécurisées,
-                                ainsi que des études d'exécution lots techniques de qualité supérieure.
+                                JBH Engineering est un bureau d&apos;études techniques spécialisé dans le génie civil et les lots
+                                techniques. Notre mission : fournir des études dexécution de structure optimisées et sécurisées,
+                                ainsi que des études d&apos;exécution lots techniques de qualité supérieure.
                             </p>
                             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                                 Nous offrons un support et une assistance technique aux opérateurs du métier, avec un conseil
-                                dans toutes les phases de conception : APS, APD, Projet d'exécution et estimation des investissements.
+                                dans toutes les phases de conception : APS, APD, Projet d&apos;exécution et estimation des investissements.
                             </p>
 
                             <div className="grid grid-cols-2 gap-4 mb-10">
@@ -226,9 +228,10 @@ export default function AboutPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -279,7 +282,7 @@ export default function AboutPage() {
             {/* Timeline Section */}
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" fill alt="" aria-hidden="true" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -338,7 +341,7 @@ export default function AboutPage() {
                     >
                         <div className="max-w-2xl">
                             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
-                                Rencontrez l'Équipe
+                                Rencontrez l&apos;Équipe
                             </span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight">
                                 Les Experts Derrière <br />
@@ -400,9 +403,10 @@ export default function AboutPage() {
             <section className="py-24 bg-secondary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -426,7 +430,7 @@ export default function AboutPage() {
                         </h2>
                         <p className="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
                             Discutons de la manière dont nous pouvons donner vie à vos rêves architecturaux.
-                            Contactez-nous dès aujourd'hui pour une consultation gratuite.
+                            Contactez-nous dès aujourd&apos;hui pour une consultation gratuite.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button asChild className="rounded-full px-10 h-14 font-bold tracking-wide shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all duration-300">

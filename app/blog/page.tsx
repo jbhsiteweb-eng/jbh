@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock, User, Search, Tag } from "lucide-react";
+import { ArrowRight, Calendar, Clock, User, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { blogPosts, categories } from "@/data/blogs/blogs";
@@ -42,9 +42,10 @@ export default function BlogPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -70,14 +71,14 @@ export default function BlogPage() {
                             Informations & Articles
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
-                            Blog d'ingénierie <br />
+                            Blog d&apos;ingénierie <br />
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">
                                 & de Design
                             </span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
                             Explorez les dernières tendances, innovations et idées en ingénierie,
-                            construction et design d'intérieur de notre équipe d'experts.
+                            construction et design d&apos;intérieur de notre équipe d&apos;experts.
                         </p>
                     </motion.div>
                 </div>
@@ -173,7 +174,7 @@ export default function BlogPage() {
             <section className="py-24 relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-5">
-                    <img src="/bg/bg.jpeg" alt="" className="w-full h-full object-cover" />
+                    <Image src="/bg/bg.jpeg" fill alt="" aria-hidden="true" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -264,7 +265,7 @@ export default function BlogPage() {
                         className="flex justify-center mt-16"
                     >
                         <Button variant="outline" className="rounded-full px-10 h-14 border-primary/20 hover:bg-primary hover:text-white transition-all duration-300">
-                            Charger Plus d'Articles
+                            Charger Plus d&apos;Articles
                         </Button>
                     </motion.div>
                 </div>
@@ -274,9 +275,10 @@ export default function BlogPage() {
             <section className="py-24 bg-secondary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>
@@ -299,7 +301,7 @@ export default function BlogPage() {
                             </span>
                         </h2>
                         <p className="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
-                            Recevez les dernières tendances architecturales, les mises à jour des projets et les informations sur l'industrie
+                            Recevez les dernières tendances architecturales, les mises à jour des projets et les informations sur l&apos;industrie
                             directement dans votre boîte de réception.
                         </p>
 
@@ -310,7 +312,7 @@ export default function BlogPage() {
                                 className="h-14 rounded-full bg-white/10 border-white/20 text-white placeholder:text-gray-400 flex-1"
                             />
                             <Button className="rounded-full px-8 h-14 font-bold tracking-wide shadow-lg shadow-primary/30">
-                                S'abonner <ArrowRight className="w-4 h-4 ml-2" />
+                                S&apos;abonner <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                         </div>
                     </motion.div>

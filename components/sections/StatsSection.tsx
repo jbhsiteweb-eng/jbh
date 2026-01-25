@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Award, Users, Building, Smile, ArrowUpRight } from "lucide-react";
 import { motion, useInView, useMotionValue, useSpring, Variants } from "framer-motion";
+import Image from "next/image";
 
 const stats = [
     { icon: Award, value: 10, label: "Awards Won", suffix: "+" },
@@ -67,10 +68,11 @@ export function StatsSection() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-secondary/95 z-10" />
-                <img
+                <Image
                     src="/bg/bg.jpeg"
                     alt="Technical Floor Plan Background"
-                    className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
+                    fill
+                    className="object-cover opacity-20 invert mix-blend-overlay"
                 />
             </div>
 

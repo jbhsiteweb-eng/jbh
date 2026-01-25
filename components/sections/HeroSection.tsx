@@ -2,10 +2,9 @@
 import React, { useRef, useEffect, useState, Suspense } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { ArrowRight, Play, ChevronDown, Award, Building2, Users } from 'lucide-react';
+import { ArrowRight, ChevronDown, Award, Building2, Users } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 // Dynamically import 3D scene to avoid SSR issues
@@ -207,6 +206,7 @@ export function HeroSection() {
         }, 6000);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentSlide, isAnimating]);
 
     return (
@@ -240,7 +240,7 @@ export function HeroSection() {
                         <h1 className="mb-6 mt-3  overflow-hidden">
                             <span
                                 ref={titleRef}
-                                className="block text-5xl md:text-6xl lg:text-2xl xl:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tight"
+                                className="block text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tight"
                                 style={{ perspective: '1000px' }}
                             >
                                 {slides[currentSlide].title}
@@ -328,7 +328,7 @@ export function HeroSection() {
                                 {/* Floating Stats Badge */}
                                 <div className="absolute -bottom-10 -left-12 bg-primary text-white px-6 py-3 rounded-2xl shadow-xl shadow-primary/30">
                                     <div className="text-2xl font-bold">5+</div>
-                                    <div className="text-xs text-white/80">Ans d'Expérience</div>
+                                    <div className="text-xs text-white/80">Ans d&apos;Expérience</div>
                                 </div>
                             </div>
                         </div>

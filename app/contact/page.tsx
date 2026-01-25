@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 const contactInfo = [
     {
@@ -152,9 +153,10 @@ export default function ContactPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/95 z-10" />
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint detailsBackground"
+                        fill
                         className="w-full h-full object-cover opacity-20 invert mix-blend-overlay"
                     />
                 </div>contactInfo
@@ -221,9 +223,10 @@ export default function ContactPage() {
             <section className="py-24 relative overflow-hidden" id="inputs">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 z-0 pointer-events-none">
-                    <img
+                    <Image
                         src="/bg/bg.jpeg"
                         alt="Blueprint Background"
+                        fill
                         className="w-full h-full object-cover opacity-5"
                     />
                 </div>
@@ -442,9 +445,10 @@ export default function ContactPage() {
                                 className="bg-secondary p-10 rounded-3xl relative overflow-hidden"
                             >
                                 <div className="absolute inset-0 opacity-10">
-                                    <img
+                                    <Image
                                         src="/bg/bg.jpeg"
                                         alt=""
+                                        fill
                                         className="w-full h-full object-cover invert"
                                     />
                                 </div>

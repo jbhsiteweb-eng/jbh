@@ -51,7 +51,7 @@ export default function FunctionsSection() {
                             transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-4xl leading-tight font-heading"
                         >
-                            Notre Chemin Vers <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">l'Excellence Technique</span>
+                            Notre Chemin Vers <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">l&apos;Excellence Technique</span>
                         </motion.h2>
                     </div>
 
@@ -87,9 +87,10 @@ export default function FunctionsSection() {
                                                 {/* Image Section */}
                                                 <div className="relative h-64 rounded-[2rem] m-2 overflow-hidden">
                                                     <div className="absolute inset-0 bg-gray-900/10 group-hover/card:bg-gray-900/0 transition-colors duration-500 z-10"></div>
-                                                    <img
+                                                    <Image
                                                         src={project.image}
                                                         alt={project.title}
+                                                        fill
                                                         className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-700"
                                                     />
                                                     {/* Category Badge */}

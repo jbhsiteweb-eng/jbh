@@ -128,8 +128,8 @@ const transporter = nodemailer.createTransport({
     // Do not fail on invalid certs (for self-signed certificates)
     rejectUnauthorized: false,
   },
-  debug: true, // Enable debug output
-  logger: true, // Log to console
+  debug: process.env.NODE_ENV === 'development', // Only enable debug in development
+  logger: process.env.NODE_ENV === 'development', // Only log in development
 });
 
 export async function POST(request: NextRequest) {
