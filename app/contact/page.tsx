@@ -186,7 +186,7 @@ export default function ContactPage() {
                             </span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
-                            Prêt à transformer votre vision en réalité ? Contactez notre équipe d'ingénieurs experts dès aujourd'hui.
+                            Prêt à transformer votre vision en réalité ? Contactez notre équipe dingénieurs experts dès aujourdhui.
                         </p>
                     </motion.div>
                 </div>
@@ -405,7 +405,7 @@ export default function ContactPage() {
                                     </span>
                                 </h2>
                                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                                    Avec plus de 15 ans d'expérience dans l'ingénierie de construction,
+                                    Avec plus de 15 ans dexpérience dans lingénierie de construction,
                                     nous partageons votre vision avec précision et innovation.
                                 </p>
 
