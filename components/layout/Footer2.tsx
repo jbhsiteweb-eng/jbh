@@ -215,7 +215,7 @@ export function Footer2() {
                                 href="#"
                                 className="text-sm text-gray-500 hover:text-primary transition-colors"
                             >
-                                Conditions d'Utilisation
+                                Conditions d&apos;Utilisation
                             </Link>
                         </div>
                     </div>

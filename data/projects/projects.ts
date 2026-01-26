@@ -50,8 +50,8 @@ export const projectsByCategory = {
             image: "/images/project/education/clinique-ibn-rochd.jpg",
             gallery: [
                 "/images/project/1.png",
-                "/images/project/clinique-ibn-rochd.png",
-                "/images/project/clinique-ibn-rochd.png",
+                "/images/project/education/clinique-ibn-rochd.jpg",
+                "/images/project/1.png",
             ],
             description: "Construction d'une clinique moderne offrant des services de santé de qualité a la région de Tiznit. Le projet comprend des blocs opération des chambre d'hospitalisation et des services d'urgence.",
             challenge: "Concevoir des solutions techniques pour intégrer des équipements médicaux de pointes dans une architecture fonctionnelle tout en respectant les normes sanitaires strictes ",
