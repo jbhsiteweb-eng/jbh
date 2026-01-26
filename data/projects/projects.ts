@@ -85,7 +85,7 @@ export const projectsByCategory = {
             ],
             description: "Réalisation d’une clinique moderne destinée à fournir des soins de santé de qualité incluant des blocs opératoires, des unités d’hospitalisation",
             challenge: "Concevoir et réaliser une clinique répondant aux normes médicales strictes tout en assurant fonctionnalité, sécurité et performance technique.",
-            solution: "ne approche technique pensée pour garantir le bien-être des patients et des équipes médicales, avec une attention particulière porté.",
+            solution: "Une approche technique pensée pour garantir le bien-être des patients et des équipes médicales, avec une attention particulière porté.",
             features: [
                 "Blocs Opératoires",
                 "Service Maternité",
@@ -204,7 +204,7 @@ export const projectsByCategory = {
                 "/images/project/clinique/sante/24-tata-2.jpg",
                 "/images/project/clinique/sante/24-tata-3.jpg",
             ],
-            description: "amenagement de 24 centres santé dans la région de Tata, offrant un service de santé de pointe",
+            description: "Amenagement de 24 centres santé dans la région de Tata, offrant un service de santé de pointe",
             challenge: "Concevoir une structure conforme aux normes médicales et techniques.",
             solution: "Développer un bâtiment respectant les standards en matière sanitaire et de sécurité médicale.",
             features: [
