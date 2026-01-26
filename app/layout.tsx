@@ -29,10 +29,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jbh.ma"),
   title: {
-    default: "JBH ENGINEERING | Bureau d'Études Techniques - Ingénierie à Agadir, Maroc",
-    template: "%s | JBH ENGINEERING"
+    default: "Bureau d'Études Techniques Agadir & Ingénierie | JBH Engineering",
+    template: "%s | JBH Engineering"
   },
-  description: "JBH ENGINEERING - Bureau d'études techniques de référence à Agadir, Maroc. Spécialisé en ingénierie de structure (béton armé, charpente métallique), lots techniques (CVC, plomberie, électricité), VRD et sécurité incendie. Plus de 500 projets réalisés avec expertise et innovation.",
+  description: "Bureau d'études techniques JBH Engineering à Agadir. Experts en ingénierie structure, lots techniques, VRD et sécurité incendie. +500 projets au Maroc.",
   keywords: [
     "bureau études techniques Agadir",
     "ingénierie structure Maroc",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_MA",
     siteName: "JBH ENGINEERING",
-    title: "JBH ENGINEERING | Bureau d'Études Techniques - Ingénierie Agadir",
+    title: "Bureau d'Études Techniques Agadir & Ingénierie | JBH Engineering",
     description: "Bureau d'études techniques expert à Agadir. Ingénierie structure, lots techniques, VRD, sécurité incendie. 500+ projets réalisés au Maroc.",
     images: [
       {

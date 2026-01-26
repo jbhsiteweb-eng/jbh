@@ -12,8 +12,8 @@ import { CardsSection } from "@/components/sections/CardsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "JBH ENGINEERING | Bureau d'Études Techniques - Ingénierie Structure, Lots Techniques & VRD à Agadir",
-  description: "JBH ENGINEERING - Bureau d'études techniques à Agadir, Maroc. Expert en ingénierie de structure, lots techniques (CVC, plomberie, électricité), VRD et sécurité incendie. Plus de 500 projets réalisés avec excellence et innovation.",
+  title: "Bureau d'Études Techniques Agadir & Ingénierie | JBH Engineering",
+  description: "Bureau d'études techniques JBH Engineering à Agadir. Experts en ingénierie structure, lots techniques, VRD et sécurité incendie. +500 projets au Maroc.",
   keywords: [
     "bureau études techniques Agadir",
     "ingénierie structure Maroc",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     "installation technique bâtiment"
   ],
   openGraph: {
-    title: "JBH ENGINEERING | Bureau d'Études Techniques - Ingénierie à Agadir",
-    description: "Expert en ingénierie de structure, lots techniques, VRD et sécurité incendie à Agadir. Plus de 500 projets réalisés. Études béton armé, charpente métallique, installations CVC.",
+    title: "Bureau d'Études Techniques Agadir & Ingénierie | JBH Engineering",
+    description: "Expert en ingénierie de structure, lots techniques, VRD et sécurité incendie à Agadir. Plus de 500 projets réalisés.",
     type: "website",
     locale: "fr_MA",
     url: "https://jbh.ma",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JBH ENGINEERING | Bureau d'Études Techniques Agadir",
+    title: "Bureau d'Études Techniques Agadir & Ingénierie | JBH Engineering",
     description: "Bureau d'études techniques à Agadir. Ingénierie structure, lots techniques, VRD, sécurité incendie. 500+ projets réalisés.",
     images: ["/images/og/home-og.jpg"]
   },

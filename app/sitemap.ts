@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+import { projects } from "@/data/projects/projects";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://jbh.ma";
 
@@ -17,19 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === "" ? 1 : 0.8
     }));
 
-    // Project pages (you can add dynamic project data here)
-    const projectRoutes = [
-        "/projects/1",
-        "/projects/2",
-        "/projects/3",
-        "/projects/4",
-        "/projects/5",
-        "/projects/6",
-        "/projects/7",
-        "/projects/8",
-        "/projects/9"
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
+    // Project pages
+    const projectRoutes = projects.map((project) => ({
+        url: `${baseUrl}/projects/${project.slug}`,
         lastModified: new Date(),
         changeFrequency: "monthly" as const,
         priority: 0.6
