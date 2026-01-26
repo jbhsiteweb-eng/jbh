@@ -15,7 +15,7 @@ export const siteConfig = {
                 "Contrôle technique",
                 "Etudes Sécurité incendie",
             ],
-            image: "/images/company/abd.jpeg",
+            image: "/images/company/profile-image.jpeg",
         },
         {
             name: "Mr. Mohamed El Hilali",
