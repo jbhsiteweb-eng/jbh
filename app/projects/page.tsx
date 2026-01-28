@@ -226,8 +226,8 @@ export default function ProjectsPage() {
                         {[
                             { value: "500+", label: "Projets Réalisés" },
                             { value: "98%", label: "Satisfaction Client" },
-                            { value: "25+", label: "Années d'Expérience" },
-                            { value: "15", label: "Pays Desservis" },
+                            { value: "15+", label: "Années d'Expérience" },
+                            { value: "15", label: "Régions Desservies" },
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}

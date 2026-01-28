@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 const slides = [
     {
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
-        title: "JBH Engineering",
+        title: "JBH ENGINEERING",
         subtitle: "Bureau d'Études",
         description: "Expert en ingénierie de structure, lots techniques (CVC, plomberie, électricité), VRD et sécurité incendie à Agadir, Maroc.",
     },

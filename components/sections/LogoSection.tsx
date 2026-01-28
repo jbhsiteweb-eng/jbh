@@ -12,7 +12,7 @@ export function LogoSection() {
         },
         {
             src: "/images/logos/atlas.jpeg",
-            title: "Atlas",
+            title: "Atlas Hospitality",
         },
         {
             src: "/images/logos/danialand.jpeg",
@@ -29,11 +29,11 @@ export function LogoSection() {
         
         {
             src: "/images/logos/mobina.jpeg",
-            title: "Mobina",
+            title: "Moubina",
         },
         {
             src: "/images/logos/ofppt.jpeg",
-            title: "OFPT",
+            title: "OFPPT",
         },
         {
             src: "/images/logos/police.jpeg",
@@ -41,7 +41,7 @@ export function LogoSection() {
         },
         {
             src: "/images/logos/ramsa.jpeg",
-            title: "RAMSA",
+            title: "Santé Maroc",
         },
         {
             src: "/images/logos/souscamp.jpeg",

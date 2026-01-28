@@ -8,12 +8,12 @@ const principles = [
     {
         icon: Ruler,
         title: "Conseil, diagnostic et expertise",
-        description: "Diagnostic suite incendie, analyse de la résistance mécanique des structures, prélèvement des aciers pour mesure de ductilité...",
+        description: "Diagnostic sécurité Incendie , analyse de la résistance mécanique des structures, prélèvement des aciers pour mesure de ductilité...",
     },
     {
         icon: Building2,
         title: "Assistance à la maîtrise d’ouvrage",
-        description: "Pour piloter vos chantiers dans le Nord ou Île-de-France, notre bureau d’étude vous propose l’assistance maîtrise d’ouvrage...",
+        description: "Pour piloter vos chantiers, notre bureau d’étude vous propose l’assistance maîtrise d’ouvrage...",
     },
 ];
 

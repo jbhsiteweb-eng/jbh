@@ -267,7 +267,7 @@ export const projectsByCategory = {
                 "/images/project/education/al-inbiaat.png",
                 "/images/project/education/al-inbiaat.png",
             ],
-            description: "Bureau d'études pour un établissement scolaire privé offrant un cadre éducatif épanouissant pour le primaire et le secondaire.",
+            description: "Les études techniques pour un établissement scolaire privé offrant un cadre éducatif épanouissant pour le primaire et le secondaire.",
             challenge: "Optimiser les réseaux techniques pour accueillir différentes tranches d'âge en garantissant sécurité et confort thermique.",
             solution: "Études de cloisonnement technique pour cours séparées, dimensionnement éclairage naturel des salles de classe, et équipements laboratoires scientifiques.",
             features: [
@@ -421,7 +421,7 @@ export const projectsByCategory = {
             ],
             description: "Études techniques pour un hôtel moderne alliant confort, design et fonctionnalité, destiné à accueillir les touristes et les voyageurs d'affaires.",
             challenge: "Dimensionner les installations techniques pour un bâtiment hôtelier reflétant l'excellence tout en offrant des espaces fonctionnels pour les événements et réunions.",
-            solution: "Concevoir et réaliser un hôtel moderne alliant confort, fonctionnalité et design, répondant aux normes de sécurité et de qualité ",
+            solution: "Concevoir et réaliser aménager un hôtel moderne alliant confort, fonctionnalité et design, répondant aux normes de sécurité et de qualité ",
             features: [
                 "Structure Grand Atrium",
                 "Réseaux CVC Hôtelier",
@@ -449,7 +449,7 @@ export const projectsByCategory = {
                 "/images/project/tourisme/amadil-beach-pool.png",
                 "/images/project/tourisme/amadil-beach-atrium.png",
             ],
-            description: "Analyses techniques pour la conception d’un hôtel contemporain, combinant confort, esthétique et praticité, conçu pour accueillir à la fois les touristes et les voyageurs professionnels.",
+            description: "Analyses techniques pour L'aménagement d’un hôtel contemporain, combinant confort, esthétique et praticité, conçu pour accueillir à la fois les touristes et les voyageurs professionnels.",
             challenge: "Concevoir les installations techniques d'un édifice incarnant le prestige de l'hôtellerie tout en proposant des espaces pratiques pour accueillir événements et réunions.",
             solution: " Mettre en œuvre un hôtel contemporain intégrant design, confort et fonctionnalité, tout en garantissant la sécurité et la qualité des installations ",
             features: [
@@ -463,8 +463,8 @@ export const projectsByCategory = {
         },
         {
             id: "15",
-            title: "Hôtel SAFABA",
-            slug: "hotel-safaba",
+            title: "Hôtel EL MAR",
+            slug: "hotel-el-mar",
             category: "Tourisme",
             location: "Agadir, Maroc",
             year: "2023",
@@ -553,8 +553,8 @@ export const projectsByCategory = {
         },
         {
             id: "18",
-            title: "Hôtel Club Des Avocats",
-            slug: "hotel-club-des-avocats",
+            title: "ADAGIO APPART HOTEL",
+            slug: "adagio-appart-hotel",
             category: "Tourisme",
             location: "Agadir, Maroc",
             year: "2022",
@@ -1210,7 +1210,7 @@ export const projectsByCategory = {
                 "/images/project/Infrastructure/corniche-anza.jpg",
             ],
             description: "Construction de la corniche à ANZA, alliant techniques modernes, sécurité et qualité des finitions.",
-            challenge: "Concevoir et réaliser une corniche moderne à ANZA, intégrant sécurité, esthétique et durabilité, tout en respectant l'environnement et le paysage naturel.",
+            challenge: "laboration des études techniques de réalisation de la  une corniche moderne à ANZA, intégrant sécurité, esthétique et durabilité, tout en respectant l'environnement et le paysage naturel.",
             solution: "Vérifier les règles locales de construction, les charges admissibles et les matériaux autorisés.",
             features: [
                 "Aménagement Côtier",

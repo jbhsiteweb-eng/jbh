@@ -84,7 +84,7 @@ export function CardsSection() {
                         transition={{ delay: 0.3 }}
                         className="text-muted-foreground text-lg leading-relaxed"
                     >
-                        Une expertise complète pour répondre à tous vos besoins en ingénierie et architecture.
+                        Une expertise complète pour répondre à tous vos besoins en ingénierie tout corps d&apos;état.
                     </motion.p>
                 </div>
 

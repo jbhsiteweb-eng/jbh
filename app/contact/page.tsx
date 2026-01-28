@@ -188,7 +188,7 @@ export default function ContactPage() {
                             </span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
-                            Prêt à transformer votre vision en réalité ? Contactez notre équipe dingénieurs experts dès aujourdhui.
+                            Prêt à transformer votre vision en réalité ? Contactez notre équipe d&apos;ingénieurs experts dès aujourd&apos;hui.
                         </p>
                     </motion.div>
                 </div>
