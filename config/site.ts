@@ -95,7 +95,7 @@ export const siteConfig = {
         awardsWon: "150+",
         teamMembers: "50+",
         clientSatisfaction: "98%",
-        countriesServed: "15",
+        countriesServed: "12",
     },
 };
 
