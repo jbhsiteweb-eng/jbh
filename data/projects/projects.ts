@@ -1,12 +1,12 @@
 export const categories = [
     "Tous",
-    "Santé",
-    "Éducation",
-    "Showroom",
     "Tourisme",
-    "Industriel",
     "Résidentiel",
+    "Showroom",
+    "Industriel",
     "Infrastructure",
+    "Éducation",
+    "Santé"
 ];
 
 
@@ -83,7 +83,7 @@ export const projectsByCategory = {
             image: "/images/project/clinique/clinique-maelainin.jpg",
             gallery: [
                 "/images/gallery/SANTE/CLINIQUE CHEIKH MAELAININ/2.jpg",
-                "/images/gallery/SANTE/CLINIQUE CHEIKH MAELAININ/ITP-Akdital-Sale-1338-scaled.jpg",
+                "/images/gallery/SANTE/CLINIQUE CHEIKH MAELAININ/ITP-Akdital-Sale-1338-scaled.jpeg",
                 "/images/gallery/SANTE/CLINIQUE CHEIKH MAELAININ/salle-de-catheterisme.jpg",
             ],
             description: "Réalisation d’une clinique moderne destinée à fournir des soins de santé de qualité incluant des blocs opératoires, des unités d’hospitalisation",
@@ -177,7 +177,7 @@ export const projectsByCategory = {
                 "/images/gallery/SANTE/CLINIQUE HAY MOHAMMADI/ITP-Akdital-Taroudant-6416-600x600.jpg",
                 "/images/gallery/SANTE/CLINIQUE HAY MOHAMMADI/hospitalisation2.jpg",
             ],
-            description: "Construire une clinique moderne, équipé des dernières technologies d'imagerie médicale pour offrir des services de diagnostic précis et fiables.",
+            description: "Construire une clinique moderne, équipée des dernières technologies d'imagerie médicale pour offrir des services de diagnostic précis et fiables.",
             challenge: "Planifier et construire des centres conforme aux standards médicaux les plus exigeants, en garantissant sécurité, efficacité et performance technique.",
             solution: "Intégrant des équipements de pointe et une architecture optimisée pour le confort des patients et l'efficacité du personnel médical.",
             features: [
@@ -1213,7 +1213,7 @@ export const projectsByCategory = {
                 "/images/gallery/infrastructure/CORNICHE ANZA/corniche-anza.webp",
             ],
             description: "Construction de la corniche à ANZA, alliant techniques modernes, sécurité et qualité des finitions.",
-            challenge: "Laboration des études techniques de réalisation de la  une corniche moderne à ANZA, intégrant sécurité, esthétique et durabilité, tout en respectant l'environnement et le paysage naturel.",
+            challenge: "Élaboration des études techniques de réalisation de la corniche moderne à ANZA, intégrant sécurité, esthétique et durabilité, tout en respectant l'environnement et le paysage naturel.",
             solution: "Vérifier les règles locales de construction, les charges admissibles et les matériaux autorisés.",
             features: [
                 "Aménagement Côtier",
@@ -1238,9 +1238,10 @@ export const projectsByCategory = {
             featured: true,
             image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1600&auto=format&fit=crop",
             gallery: [
-                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/lotissement-oasis-8-essaouira-4-e1615649506388.jpg",
-                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/lotissement-oasis-8-essaouira-6-scaled-e1615649561509.jpg",
-                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/lotissement-oasis-8-essaouira-scaled-e1615647645212.jpg",
+                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/1.png",
+                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/2.jpg",
+                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/3.gif",
+                "/images/gallery/infrastructure/LOTISSEMENT ECO CAP/4.png",
             ],
             description: "Conception et réalisation du lotissement Éco Cap, intégrant des principes écologiques et un habitat de qualité pour ses habitants.",
             challenge: "Concevoir un projet résidentiel durable alliant respect de l'environnement, confort des habitants et intégration harmonieuse dans le paysage.",
