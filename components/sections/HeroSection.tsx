@@ -237,10 +237,10 @@ export function HeroSection() {
                         </div>
 
                         {/* Main Title */}
-                        <h1 className="mb-6 mt-3  overflow-hidden">
+                        <h1 className="mb-6 mt-6 py-6  overflow-hidden">
                             <span
                                 ref={titleRef}
-                                className="block text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tight"
+                                className="block text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-heading font-bold text-white leading-[0.9] tracking-tight"
                                 style={{ perspective: '1000px' }}
                             >
                                 {slides[currentSlide].title}
