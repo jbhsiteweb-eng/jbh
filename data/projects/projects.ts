@@ -164,7 +164,7 @@ export const projectsByCategory = {
             title: "Clinique Hay Mohammadi",
             slug: "clinique-hay-mohammadi",
             category: "Santé",
-            location: "Tiznit, Maroc",
+            location: "Agadir, Maroc",
             year: "2024",
             area: "3 938 m²",
             client: "Privé",
